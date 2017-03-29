@@ -26,11 +26,12 @@ public class PaletteFragment extends Fragment {
             "GREEN", "#004000", "CYAN", "BLUE",
             "PURPLE", "WHITE", "GREY", "BLACK"};
 
-    PaletteArrayAdapter adapter = new PaletteArrayAdapter(PaletteFragment.this.getContext(),
+
+    PaletteArrayAdapter adapter = new PaletteArrayAdapter(PaletteFragment.this.getActivity(),
             android.R.layout.simple_spinner_dropdown_item,
             colors);
 
-    PaletteInterface parent;
+    PaletteInterface paletteInterface;
 
     public PaletteFragment() {
         // Required empty public constructor
@@ -40,17 +41,15 @@ public class PaletteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View layout = inflater.inflate(R.layout.fragment_palette, container, false);
-
+        spinner = (Spinner) layout.findViewById(R.id.spinner);
         spinner.setAdapter(adapter);
+
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                // Error:(51, 32) error: non-static method changeColor(int) cannot be referenced from a static context
-                // nothing is denoted as static so why am I getting this?
-                PaletteInterface.changeColor(Color.parseColor(colors[position]));
+                paletteInterface.changeColor(Color.parseColor(colors[position]));
             }
 
             @Override
@@ -67,7 +66,7 @@ public class PaletteFragment extends Fragment {
         super.onAttach(activity);
 
         if (activity instanceof  PaletteInterface){
-            parent = (PaletteInterface) activity;
+            paletteInterface = (PaletteInterface) activity;
         } else {
             throw new RuntimeException("Not Implemented");
         }
@@ -76,9 +75,6 @@ public class PaletteFragment extends Fragment {
     }
 
     public interface PaletteInterface {
-        /*  Error:(79, 32) error: static interface methods are not supported in -source 1.7
-            (use -source 8 or higher to enable static interface methods) */
         void changeColor(int color);
     }
-
 }
