@@ -78,7 +78,7 @@ public class PaletteFragment extends Fragment {
     public interface PaletteInterface {
         /*  Error:(79, 32) error: static interface methods are not supported in -source 1.7
             (use -source 8 or higher to enable static interface methods) */
-        static void changeColor(int color);
+        void changeColor(int color);
     }
 
 }
