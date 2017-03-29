@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Palette Fragments</string>
+    <string-array name="color_labels_array">
+        <item>Dark Red</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Dark Green</item>
+        <item>Cyan</item>
+        <item>Blue</item>
+        <item>Purple</item>
+        <item>White</item>
+        <item>Grey</item>
+        <item>Black</item>
+    </string-array>
+
+    <string name="prompt">Pick a color:</string>
+</resources>
