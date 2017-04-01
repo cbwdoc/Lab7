@@ -19,17 +19,9 @@ import android.widget.Spinner;
  */
 public class PaletteFragment extends Fragment {
 
-
-    Spinner spinner;
-
     String[] colors = {"#800000", "RED", "#FF6000", "YELLOW",
             "GREEN", "#004000", "CYAN", "BLUE",
             "PURPLE", "WHITE", "GREY", "BLACK"};
-
-
-    PaletteArrayAdapter adapter = new PaletteArrayAdapter(PaletteFragment.this.getActivity(),
-            android.R.layout.simple_spinner_dropdown_item,
-            colors);
 
     PaletteInterface paletteInterface;
 
@@ -42,7 +34,12 @@ public class PaletteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View layout = inflater.inflate(R.layout.fragment_palette, container, false);
-        spinner = (Spinner) layout.findViewById(R.id.spinner);
+
+        PaletteArrayAdapter adapter = new PaletteArrayAdapter(PaletteFragment.this.getActivity(),
+                android.R.layout.simple_spinner_dropdown_item,
+                colors);
+
+        Spinner spinner = (Spinner) layout.findViewById(R.id.spinner);
         spinner.setAdapter(adapter);
 
 
