@@ -15,8 +15,8 @@ public class MainActivity extends Activity implements PaletteFragment.PaletteInt
 
         canvasFragment = new CanvasFragment();
 
-        addFragment(new PaletteFragment(), R.id.palette);
-        addFragment(canvasFragment, R.id.canvas);
+        addFragment(new PaletteFragment(), R.id.frag1);
+        addFragment(canvasFragment, R.id.frag2);
 
     }
 
