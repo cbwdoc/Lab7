@@ -2,6 +2,7 @@ package edu.temple.fragmentlab;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -19,9 +20,10 @@ import android.widget.Spinner;
  */
 public class PaletteFragment extends Fragment {
 
-    String[] colors = {"#800000", "RED", "#FF6000", "YELLOW",
+    String[] colors = {"", "GREY", "BLACK",
+            "#800000", "RED", "#FF6000", "YELLOW",
             "GREEN", "#004000", "CYAN", "BLUE",
-            "PURPLE", "WHITE", "GREY", "BLACK"};
+            "PURPLE"};
 
     PaletteInterface paletteInterface;
 
