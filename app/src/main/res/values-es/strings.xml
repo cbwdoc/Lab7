@@ -2,6 +2,9 @@
 <resources>
     <string name="app_name">Palette Fragments</string>
     <string-array name="color_labels_array">
+        <item>Blanco</item>
+        <item>Gris</item>
+        <item>Negro</item>
         <item>Rojo Oscuro</item>
         <item>Rojo</item>
         <item>Naranja</item>
@@ -10,10 +13,7 @@
         <item>Verde Oscuro</item>
         <item>Ciánico</item>
         <item>Azul</item>
-        <item>Púrpura</item>
-        <item>Blanco</item>
-        <item>Gris</item>
-        <item>Negro</item>
+        <item>Púrpura</item>        
     </string-array>
 
     <string name="prompt">Escoger un color:</string>
