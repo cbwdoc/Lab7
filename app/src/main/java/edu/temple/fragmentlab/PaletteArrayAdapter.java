@@ -1,6 +1,7 @@
 package edu.temple.fragmentlab;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.text.Layout;
 import android.view.LayoutInflater;
@@ -24,6 +25,9 @@ import java.util.List;
  */
 
 public class PaletteArrayAdapter extends ArrayAdapter {
+
+    Resources res = this.getContext().getResources();
+    String[] colorLabels = res.getStringArray(R.array.color_labels_array);
 
     public PaletteArrayAdapter(Context context, int resource) {
         super(context, resource);
@@ -57,7 +61,8 @@ public class PaletteArrayAdapter extends ArrayAdapter {
 
         // Set the Text color
         tv.setBackgroundColor(Color.parseColor((String) this.getItem(position)));
-        if (position < 2 && position > 4 && (position != 6 || position != 10))
+        tv.setText(colorLabels[position]);
+        if ((position > 1 && position < 4) || position == 8 || position > 9)
             tv.setTextColor(Color.parseColor("WHITE"));
         else
             tv.setTextColor(Color.parseColor("BLACK"));
@@ -66,4 +71,3 @@ public class PaletteArrayAdapter extends ArrayAdapter {
     }
 
 }
-
