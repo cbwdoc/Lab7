@@ -12,7 +12,6 @@ import android.view.ViewGroup;
  */
 public class CanvasFragment extends Fragment {
 
-
     View canvas;
 
     public CanvasFragment() {
@@ -25,7 +24,7 @@ public class CanvasFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View layout = inflater.inflate(R.layout.fragment_canvas, container, false);
-        canvas = (View) layout.findViewById(R.id.canvas);
+        canvas = (View) layout.findViewById(R.id.fragment_canvas);
         return layout;
     }
 
