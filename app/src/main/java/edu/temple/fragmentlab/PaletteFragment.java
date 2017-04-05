@@ -20,7 +20,7 @@ import android.widget.Spinner;
  */
 public class PaletteFragment extends Fragment {
 
-    String[] colors = {"", "GREY", "BLACK",
+    String[] colors = {"WHITE", "GREY", "BLACK",
             "#800000", "RED", "#FF6000", "YELLOW",
             "GREEN", "#004000", "CYAN", "BLUE",
             "PURPLE"};
