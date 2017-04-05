@@ -2,11 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.temple.fragmentlab.CanvasFragment">
+    tools:context="edu.temple.fragmentlab.CanvasFragment"
+    android:id="@+id/fragment_canvas" >
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/background" />
 
 </FrameLayout>

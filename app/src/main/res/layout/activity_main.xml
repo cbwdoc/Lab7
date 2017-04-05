@@ -12,12 +12,12 @@
     tools:context="edu.temple.fragmentlab.MainActivity">
 
     <FrameLayout
-        android:id="@+id/palette"
+        android:id="@+id/frag1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight=".5"/>
     <FrameLayout
-        android:id="@+id/canvas"
+        android:id="@+id/frag2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight=".5"/>
